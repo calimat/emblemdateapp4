@@ -12,10 +12,16 @@ struct ContentView: View {
     var emblems = ["Fighter", "Support", "Marksman", "Tank", "Jungle", "Assassin", "Mage" ]
     @State private var emblemIndex = 0
     var body: some View {
-        Picker(selection: $emblemIndex, label: Text("Emblem")) {
-            ForEach(0 ..< emblems.count) {
-                Text(self.emblems[$0])
-            }
+        NavigationView {
+            Form {
+                Section {
+                           Picker(selection: $emblemIndex, label: Text("Emblem")) {
+                                      ForEach(0 ..< emblems.count) {
+                                          Text(self.emblems[$0])
+                                      }
+                                  }
+                       }
+            }.navigationBarTitle("Emblem Calculator")
         }
     }
 }
