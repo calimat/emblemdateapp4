@@ -13,7 +13,23 @@
 		F67006C024D68357001CC45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F67006BF24D68357001CC45C /* Assets.xcassets */; };
 		F67006C324D68357001CC45C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F67006C224D68357001CC45C /* Preview Assets.xcassets */; };
 		F67006C624D68357001CC45C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67006C424D68357001CC45C /* LaunchScreen.storyboard */; };
+		F6E0EBB224F310F1007E46A0 /* EmblemDateCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E0EBB124F310F1007E46A0 /* EmblemDateCalculator.framework */; };
+		F6E0EBB324F310F1007E46A0 /* EmblemDateCalculator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6E0EBB124F310F1007E46A0 /* EmblemDateCalculator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6E0EBB424F310F1007E46A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6E0EBB324F310F1007E46A0 /* EmblemDateCalculator.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F67006B624D68352001CC45C /* emblemDater4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emblemDater4.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +40,7 @@
 		F67006C224D68357001CC45C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F67006C524D68357001CC45C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F67006C724D68357001CC45C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E0EBB124F310F1007E46A0 /* EmblemDateCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EmblemDateCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E0EBB224F310F1007E46A0 /* EmblemDateCalculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +60,7 @@
 			children = (
 				F67006B824D68352001CC45C /* emblemDater4 */,
 				F67006B724D68352001CC45C /* Products */,
+				F6E0EBB024F310F1007E46A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +94,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F6E0EBB024F310F1007E46A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6E0EBB124F310F1007E46A0 /* EmblemDateCalculator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +112,7 @@
 				F67006B224D68352001CC45C /* Sources */,
 				F67006B324D68352001CC45C /* Frameworks */,
 				F67006B424D68352001CC45C /* Resources */,
+				F6E0EBB424F310F1007E46A0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

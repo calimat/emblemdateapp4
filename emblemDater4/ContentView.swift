@@ -7,17 +7,17 @@
 //
 
 import SwiftUI
+import EmblemDateCalculator
 
 struct ContentView: View {
-    var emblems = ["Fighter", "Support", "Marksman", "Tank", "Jungle", "Assassin", "Mage" ]
-    @State private var emblemIndex = 0
+    @State private var emblemIndex = Emblem.Fighter
     var body: some View {
         NavigationView {
             Form {
                 Section {
                            Picker(selection: $emblemIndex, label: Text("Emblem")) {
-                                      ForEach(0 ..< emblems.count) {
-                                          Text(self.emblems[$0])
+                            ForEach(Emblem.allCases, id: \.self) {
+                                Text($0.rawValue)
                                       }
                                   }
                        }
