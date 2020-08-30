@@ -10,6 +10,7 @@ import SwiftUI
 import EmblemDateCalculator
 
 struct ContentView: View {
+    @State private var nextDateTextFieldValue = "Please press Get Date"
     @State private var emblemIndex = Emblem.Fighter
     var body: some View {
         NavigationView {
@@ -24,12 +25,13 @@ struct ContentView: View {
                 Section {
                     Button(action: {
                         //Write action here
+                        self.nextDateTextFieldValue = "Button was pressed"
                     }) {
                         Text("Get Date")
                     }
                 }
                 Section {
-                    Text("Please press Get Date")
+                    Text(self.nextDateTextFieldValue)
                 }
             }.navigationBarTitle("Emblem Calculator")
         }
