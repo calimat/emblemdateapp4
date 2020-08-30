@@ -21,6 +21,16 @@ struct ContentView: View {
                                       }
                                   }
                        }
+                Section {
+                    Button(action: {
+                        //Write action here
+                    }) {
+                        Text("Get Date")
+                    }
+                }
+                Section {
+                    Text("Please press Get Date")
+                }
             }.navigationBarTitle("Emblem Calculator")
         }
     }
