@@ -11,6 +11,7 @@ import EmblemDateCalculator
 
 struct ContentView: View {
     let emblemDater:EmblemDater!
+    let emblemDateFormatter: EmblemDateFormatter!
     @State private var nextDateTextFieldValue = "Please press Get Date"
     @State private var emblemIndex = Emblem.Fighter
     var body: some View {
@@ -25,7 +26,7 @@ struct ContentView: View {
                        }
                 Section {
                     Button(action: {
-                        self.nextDateTextFieldValue =  self.emblemDater.getNextAvailableDate(for: self.emblemIndex, inCurrentDate: Date()).description
+                        self.nextDateTextFieldValue =  self.emblemDateFormatter.getFriendlyDate(self.emblemDater.getNextAvailableDate(for: self.emblemIndex, inCurrentDate: Date()))
                     }) {
                         Text("Get Date")
                     }
@@ -40,6 +41,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(emblemDater: EmblemDater())
+        ContentView(emblemDater: EmblemDater(), emblemDateFormatter: EmblemDateFormatter())
     }
 }

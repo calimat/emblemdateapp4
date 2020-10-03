@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let emblemDater = EmblemDater()
-        let contentView = ContentView(emblemDater: emblemDater)
+        let emblemDateFormatter = EmblemDateFormatter()
+        let contentView = ContentView(emblemDater: emblemDater, emblemDateFormatter: emblemDateFormatter)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
